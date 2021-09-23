@@ -7,6 +7,7 @@ enum class S2CMessageType
     ResponsePlayerReady,
     ResponseInitPlayer,
     ResponseAllPlayerReady,
+    ResponsePlayerProperty
 };
 
 enum class C2SMessageType
@@ -15,4 +16,5 @@ enum class C2SMessageType
     RequestSyncClientKeyframes,
     RequestInitPlayer,
     RequestPlayerReady,
+    RequestPlayerProperty
 };

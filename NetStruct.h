@@ -32,10 +32,19 @@ public:
 struct MutiData {
 public:
     unsigned int sequence;
+
+    unsigned int totalClientsSize;
+    unsigned int loseConnectIdsSize;
+    unsigned int newConnectIdsSize;
+
     /// <summary>
     /// 0:w,1:a,2:s,3:d,4:null
     /// </summary>
     std::vector<SingleOperatorData*> totalClients;
+
+    std::vector<unsigned long int> loseConnectIds;
+    std::vector<unsigned long int> newConnectIds;
+
     static int StructToBytes(MutiData* structObj, unsigned char* ret, int* len);
     static MutiData* BytesToStruct(unsigned char* bytes, int len);
 };
